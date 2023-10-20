@@ -41,13 +41,15 @@ export const createTab = (title: TabType): IJsonTabNode => {
 		name: title,
 		component: title,
 		className: "rounded px-2 font-medium",
+		enableRename: false,
 	}
 }
 
 export const modelAtom = atomWithStorage<IJsonModel>("modelAtom", {
 	global: {
 		tabSetMinWidth: 300,
-		enableEdgeDock: false,
+		enableEdgeDock: true,
+		tabEnableRename: false,
 	},
 	borders: [],
 	layout: {

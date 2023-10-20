@@ -6,7 +6,7 @@ import { MenuType, TabType, getMenu, modelAtom, useActiveTabs } from "../utils"
 
 interface ButtonTabProps {
 	tab: TabType
-	menutype: MenuType
+	menuType: MenuType
 }
 
 const MenuTab = (props: ButtonTabProps) => {
@@ -28,10 +28,13 @@ const MenuTab = (props: ButtonTabProps) => {
 		setModel(modelFromJson.toJson())
 	}, [isActiveTab, model, props.tab, setModel])
 
-	const Menu = useMemo(() => getMenu(props.menutype), [props.menutype])
+	const Menu = useMemo(() => getMenu(props.menuType), [props.menuType])
 
 	return (
-		<Menu.Item onClick={onClick} className="flex items-center gap-x-4">
+		<Menu.Item
+			onClick={onClick}
+			className="flex items-center gap-x-4 justify-start"
+		>
 			{icon}
 			{props.tab}
 		</Menu.Item>

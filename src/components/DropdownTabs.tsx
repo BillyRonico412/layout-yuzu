@@ -15,7 +15,7 @@ const MenuTabs = () => {
 
 			<DropdownMenu.Content>
 				{tabs.map((tab) => (
-					<MenuTab tab={tab} key={tab} menutype="dropdown" />
+					<MenuTab tab={tab} key={tab} menuType="dropdown" />
 				))}
 			</DropdownMenu.Content>
 		</DropdownMenu.Root>
